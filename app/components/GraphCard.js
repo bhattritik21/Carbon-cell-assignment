@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend } from 'chart.js';
-import { Chart } from 'react-chartjs-2';
+import { Chart ,Line} from 'react-chartjs-2';
 
 ChartJS.register(
     CategoryScale,
@@ -72,7 +72,7 @@ const GraphCard = () => {
                 <p className='text-sm text-gray-600'>WET</p>
             </div>
 
-            <Chart ref={chartRef} type='line' data={chartData} />
+            <Line ref={chartRef} data={chartData} />
             <div className='flex mt-2 justify-between'>
                 <p className='inline-block max-sm:text-sm'>Get in depth charts in Trade</p>
                 <button className='px-3 py-1 block bg-lime-600 text-black rounded'>Trade</button>
